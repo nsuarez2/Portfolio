@@ -1,0 +1,15 @@
+{% extends "templates/base.html" %}
+{% block content %} 
+	<div class="login">
+		<div class="jumbotron">
+      		<div class="container">
+        		<p>{{message}}</p>
+				<form method="post" action="/login-attempt.html">
+					<input type="text" name="user" placeholder="Username">
+					<input type="password" name="password" placeholder="Password">
+					<input type="submit" value="Login">
+				</form>
+      		</div>
+    	</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,22 @@
+.home .jumbotron {
+	background-image: url("coast.jpg");
+}
+
+.jumbotron {
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.jumbotron .container {
+  position: relative;
+  top:100px;
+}
+
+.jumbotron h1 {
+	color: #FFFFFF;
+}
+
+footer {
+	position: relative;
+}
