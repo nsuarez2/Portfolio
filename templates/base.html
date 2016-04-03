@@ -10,9 +10,6 @@
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
-	<!-- Optional theme -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
@@ -24,45 +21,51 @@
 
 
 	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+	<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
 	<script type=text/JavaScript>
+	$(window).scroll(function() {
+    	if ($(".navbar").offset().top > 1) {
+        	$('#custom-nav').addClass('affix');
+    	} else {
+        	$('#custom-nav').removeClass('affix');
+    	}   
+	});
 
-	$(document).scroll(function() { 
-		if ($(document).scrollTop() > 0) {
-			$('.navbar').removeClass('fadeInDown');
-			$('.navbar').addClass('navbar-default fadeIn');
-			$('.navbar').removeClass('navbar-transparent');
-
-		} else if ($(document).scrollTop() == 0) {
-			$('.navbar').addClass('navbar-transparent');
-			$('.navbar').removeClass('navbar-default');
-			$('.navbar').addClass('animated fadeInDown');
-		}
-	})
-
+	$(document).ready(function(){
+  		$("h1").hide();
+  	});
 	</script>
 
 </head>
 <body>
-	<nav class="navbar navbar-transparent navbar-fixed-top animated fadeInDown" role="navigation">
-		<div class="container-fluid">
+	<div id="custom-nav" class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
 			<div class="navbar-header">
 				<a class="navbar-brand" href="#">NS</a>	
 			</div>
-			<div class="collapse navbar-collapse">
-				<ul class="nav navbar-nav">
-  					<li class="active"><a href="#">Home</a></li>
+			<div class="collapse navbar-collapse navbar-top-collapse">
+				<ul class="nav navbar-nav navbar-right">
+  					<li><a href="#">Home</a></li>
   					<li><a href="#">Profile</a></li>
   					<li><a href="#">Messages</a></li>
 				</ul>
 			</div>
 		</div>
-	</nav>
+	</div>
 	{% block content %}
 	YOU SHOULDN'T BE SEEING THIS
 	{% endblock %}
 	<footer>
 		<p>Copyright &copy; Nico Suarez</p>
 	</footer>
-	
+	<script type="text/javascript">
+		$(document).ready(function(){
+  			$("h1").fadeIn(3000);
+  		});
+
+</script>
+	</script>
 </body>
 </html>
