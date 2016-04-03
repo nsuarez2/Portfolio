@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name = ‘viewport’ content=‘width=device-width, initial-scale=1’>
 	<title>Nico Suarez - {{page}}</title>
 
-	<link rel="stylesheet" href="static/animate.css">
 	<script src="https://code.jquery.com/jquery-2.2.2.min.js"   integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI="   crossorigin="anonymous"></script>
 
 	<!-- Latest compiled and minified CSS -->
@@ -13,12 +13,12 @@
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Quicksand" />
 	<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Yellowtail' rel='stylesheet' type='text/css'>
 
 	<link rel="stylesheet" type="text/css" href="static/style.css">
-
 
 	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 	<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
@@ -34,7 +34,7 @@
 	});
 
 	$(document).ready(function(){
-  		$("h1").hide();
+  		$(".jumbotron h1").hide();
   	});
 	</script>
 
@@ -42,14 +42,21 @@
 <body>
 	<div id="custom-nav" class="navbar navbar-default navbar-fixed-top">
 		<div class="container">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	         	<span class="sr-only">Menu</span>
+	         	<span class="icon-bar"></span>
+	          	<span class="icon-bar"></span>
+	          	<span class="icon-bar"></span>
+	        </button>
 			<div class="navbar-header">
 				<a class="navbar-brand" href="#">NS</a>	
 			</div>
+
 			<div class="collapse navbar-collapse navbar-top-collapse">
-				<ul class="nav navbar-nav navbar-right">
-  					<li><a href="#">Home</a></li>
-  					<li><a href="#">Profile</a></li>
-  					<li><a href="#">Messages</a></li>
+				<ul class="nav nav-pills navbar-right">
+  					<li {% if home %}class="active"{% endif %}><a href="home.html">Home</a></li>
+  					<li {% if profile %}class="active"{% endif %}><a href="profile.html">Profile</a></li>
+  					<li {% if messages %}class="active"{% endif %}><a href="messages.html">Messages</a></li>
 				</ul>
 			</div>
 		</div>
@@ -57,12 +64,23 @@
 	{% block content %}
 	YOU SHOULDN'T BE SEEING THIS
 	{% endblock %}
-	<footer>
-		<p>Copyright &copy; Nico Suarez</p>
+	<footer class="footer">
+		<ul>
+			<li><a class="fa fa-facebook fa-4x" href="https://facebook.com/nicosuarez25"></a></li>
+			<li><a class="fa fa-instagram fa-4x" href="https://www.instagram.com/nicosuarez/"></a></li>
+			<li><a class="fa fa-twitter fa-4x" href="https://twitter.com/_NicoSuarez_"></a></li>
+			<li><a class="fa fa-github fa-4x" href="http://github.com/nsuarez2"></a></li>
+			<li><a class="fa fa-linkedin fa-4x" href="https://www.linkedin.com/in/nsuarez2"></a></li>
+		</ul>
 	</footer>
 	<script type="text/javascript">
 		$(document).ready(function(){
-  			$("h1").fadeIn(3000);
+
+			{% if home %}
+  			$("#hello").fadeIn(2000, function() {
+  				$("#nico").fadeIn(2500);
+  			});
+  			{% endif %}
   		});
 
 </script>

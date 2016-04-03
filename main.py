@@ -8,13 +8,22 @@ JINJA_ENVIRONMENT = jinja2.Environment(
     extensions=['jinja2.ext.autoescape'],
     autoescape=True)
 
-class HomeHandler(webapp2.RequestHandler):
+class MainHandler(webapp2.RequestHandler):
     def get(self):
-    	logging.info("GET HOME")
-    	template = JINJA_ENVIRONMENT.get_template('templates/home.html')
-    	self.response.write(template.render({'page': 'Home'}))
+        path = self.request.path
+        if path == '/':
+            path = path + 'home.html'
+
+        template = JINJA_ENVIRONMENT.get_template('templates' + path)
+
+        path = path[1:-5]
+        infoDict = {'page': path.title() , path : True}
+
+        self.response.write(template.render(infoDict))
 
 app = webapp2.WSGIApplication([
-    ('/', HomeHandler),
-    ('/home.html', HomeHandler)
+    ('/', MainHandler),
+    ('/home.html', MainHandler),
+    ('/profile.html', MainHandler),
+    ('/messages.html', MainHandler)
 ], debug=True)
