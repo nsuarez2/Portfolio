@@ -1,16 +1,69 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  font-family: 'Varela Round', sans-serif;
+  overflow: auto;
+}
+
+.navbar {
+  height: 75px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.navbar-default {
+  opacity: 0.8;
+}
+
+.navbar-default .navbar-brand {
+  font-family: 'Yellowtail', cursive;
+  color: #1A5A97;
+  font-size: 50px;
+}
+
+.navbar-transparent .navbar-brand {
+  font-family: 'Yellowtail', cursive;
+  color: #FFFFFF;
+  font-size: 50px;
+}
+
+.navbar-transparent a {
+  color: #FFFFFF;
+  font-size: 15px;
+}
+
+.navbar-default a {
+  font-size: 15px;
+}
+
+.navbar-brand,
+.navbar-collapse li a {
+    line-height: 75px;
+    height: 75px;
+    padding-top: 0;
+}
+
+.navbar-collapse {
+  float: right;
+}
+
 .home .jumbotron {
-	background-image: url("coast.jpg");
+	background: url("rsz_coast.jpg") no-repeat center center fixed;
+  height: 100%;
+  position: relative;
+  background-size: cover;
 }
 
 .jumbotron {
-  height: 500px;
-  background-repeat: no-repeat;
-  background-size: cover;
+  text-shadow: black 0.1em 0.1em 0.1em;
 }
 
 .jumbotron .container {
   position: relative;
-  top:100px;
+  top: 250px;
 }
 
 .jumbotron h1 {
