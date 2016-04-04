@@ -5,12 +5,15 @@
 
 body {
     font-family: Quicksand;
-    overflow: auto;
     height: 100%;
 }
 
 .navbar {
     min-height: 75px;
+}
+
+.navbar .container {
+    width: 85%;
 }
 
 #custom-nav {
@@ -33,11 +36,14 @@ body {
 
 #custom-nav .active {
     background-color: rgba(248, 248, 248, 0.8);
-    border-radius: 20px;
+    border-radius: 25px;
+    height: 55px;
+    margin-top: 10px;
 }
 
 #custom-nav li.active a  {
     color: #1A5A97;
+    margin-top: -10px;
 }
 
 #custom-nav .navbar-brand {
@@ -69,7 +75,6 @@ body {
     background-image: none;
 }
 
-.navbar-toggle,
 .navbar-brand,
 .navbar-collapse li a {
     line-height: 75px;
@@ -80,6 +85,7 @@ body {
 .navbar-toggle {
     background: rgba(248, 248, 248, 0.8);
     border: 0;
+    height: 55px;
 }
 
 .home .jumbotron {
@@ -129,27 +135,66 @@ body {
     50% {opacity: 1}
 }
 
-@media screen and (max-width: 768px) {
-    #custom-nav.affix {
-        background-color: rgba(248, 248, 248, 1);
-    }
+.home-bottom {
+    padding: 50px 100px 50px 100px;
 }
 
-footer {
+.main {
+    position: relative;
+    z-index: 100;
+    background: #fff;
+    margin-bottom: 200px;
+}
+
+.skills .top {
+    background: url("clouds.gif") no-repeat center center fixed;
+    height: 75vh;
+    position: relative;
+    background-size: cover;
+}
+
+.skills .bottom {
+    position: relative;
+    width: 60%;
+    left: 20%;
+    top: -25vh;
+    background-color: white;
+    padding: 50px 100px 50px 100px;
+}
+
+.footer {
+    height: 200px;
+    width: 100%;
+    background-color: black;
+    position: fixed;
+    bottom: 0;
     text-align: center;
+    font-size: 20pt;
 }
 
-footer ul {
+.footer ul {
+    margin-top: 20px;
     padding: 0 20px 0 20px;
     width: 100%
 }
 
-footer ul li {
+.footer ul li {
     display: inline;
     float: left;
     width: 20%;
-
+    color: #1A5A97;
 }
+
+.footer ul li a:hover{
+    text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+    .footer {
+        font-size: 10pt;
+    }
+}
+
 
 
 
