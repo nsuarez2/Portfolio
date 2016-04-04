@@ -1,6 +1,6 @@
 * {
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
 }
 
 body {
@@ -90,13 +90,13 @@ body {
 
 .home .jumbotron {
 	background: url("rsz_coast.jpg") no-repeat center center fixed;
-    height: 100vh;
     position: relative;
     background-size: cover;
 }
 
 .jumbotron {
     text-shadow: black 0.1em 0.1em 0.1em;
+    height: 100vh;
 }
 
 .jumbotron .container {
@@ -124,18 +124,16 @@ body {
     animation: pulse 2s infinite;
     -webkit-animation: pulse 2s infinite;
 }
-
 @keyframes pulse {
     0%, 100% {opacity:0}
     50% {opacity: 1}
 }
-
 @-webkit-keyframes pulse {
     0%, 100% {opacity:0}
     50% {opacity: 1}
 }
 
-.home-bottom {
+.bottom {
     padding: 50px 100px 50px 100px;
 }
 
@@ -159,7 +157,71 @@ body {
     left: 20%;
     top: -25vh;
     background-color: white;
-    padding: 50px 100px 50px 100px;
+    padding: 50px 100px 0 100px;
+}
+
+.pictures {
+    background-color: black;
+    text-align: center;
+}
+.pictures .divider h1,
+.pictures .divider h3 {
+    color: #1A5A97;
+    margin: 0;
+}
+
+.pictures .divider {
+    height: 110vh;
+    width: 100%;
+    background-color: black;
+    position: relative;
+    padding-top: 25%;
+    padding-bottom: 25%;
+}
+
+#pic1 { 
+    background: url('top_of_breck.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+#pic2 { 
+    background: url('sam_breck.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+#pic3 { 
+    background: url('matt_breck.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+#pic4 { 
+    background: url('scott_breck.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+#pic5 { 
+    background: url('swelly_breck.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+#pic6 {
+    position: absolute;
+    left: 0;
+    top: 0vh;
+    width: 100%;
+    z-index: 0;
+}
+#pic7 { 
+    background: url('breck_village.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+#pic8 { 
+    background: url('rsz_coast.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+#pic9 { 
+    background: url('rsz_coast.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.pictures .pic {
+    height: 100vh;
+    width: 100%;
 }
 
 .footer {
@@ -192,8 +254,28 @@ body {
 @media screen and (max-width: 768px) {
     .footer {
         font-size: 10pt;
+        height: 100px;
     }
+    .navbar .container {
+        width: 100%;
+    }
+    .bottom {
+        padding: 10px 5px 10px 5px;
+    }
+    .jumbotron {
+        height: 80vh;
+    }
+    .skills .bottom {
+        width: 90%;
+        left: 5%;
+        padding: 10px 10px 0 10px;
+    }
+    .main {
+        margin-bottom: 100px;
+    }
+
 }
+
 
 
 

@@ -27,7 +27,7 @@
         	$('#custom-nav').addClass('affix');
     	} else {
         	$('#custom-nav').removeClass('affix');
-    	}   
+    	} 
 	});
 
 	$(document).ready(function(){
@@ -54,7 +54,7 @@
 				<ul class="nav nav-pills navbar-right">
   					<li {% if home %}class="active"{% endif %}><a href="home.html">Home</a></li>
   					<li {% if skills %}class="active"{% endif %}><a href="skills.html">Skills</a></li>
-  					<li {% if messages %}class="active"{% endif %}><a href="messages.html">Messages</a></li>
+  					<li {% if pictures %}class="active"{% endif %}><a href="pictures.html">Pictures</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -73,18 +73,5 @@
 			<li><a class="fa fa-linkedin fa-4x" href="https://www.linkedin.com/in/nsuarez2"></a></li>
 		</ul>
 	</div>
-	<script type="text/javascript">
-		$(document).ready(function(){
-			{% if home %}
-  			$('#hello').fadeIn(1500, function() {
-  				$('#nico').fadeIn(1500, function() {
-  					$('.arrow').fadeIn(1000);
-  				});
-  			});
-  			{% endif %}
-  		});
-
-</script>
-	</script>
 </body>
 </html>

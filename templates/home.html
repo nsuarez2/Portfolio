@@ -1,7 +1,7 @@
 {% extends "templates/base.html" %}
 {% block content %}
 	<div class="home">
-        <div id="home-top">
+        <div id="top">
 	        <div class="jumbotron">
                 <div class="container">
                     <h1 id="hello">Hello, World!</h1>
@@ -12,7 +12,7 @@
                 </svg>
             </div>
     	</div>
-        <div class="home-bottom">
+        <div class="bottom">
             <h1>"I have a dream"</h1>
     	   <p>I am happy to join with you today in what will go down in history as the greatest demonstration for freedom in the history of our nation.
 
@@ -108,5 +108,16 @@
 
                 Thank God Almighty, we are free at last!</p>
         </div>
+        <script type="text/javascript">
+        $(document).ready(function(){
+            {% if home %}
+            $('#hello').fadeIn(1500, function() {
+                $('#nico').fadeIn(1500, function() {
+                    $('.arrow').fadeIn(1000);
+                });
+            });
+            {% endif %}
+        });
+    </script>
 	</div>
 {%endblock%}
