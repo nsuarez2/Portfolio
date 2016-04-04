@@ -21,6 +21,8 @@
 	<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 	<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
+	<script src="static/typed.js"></script>
+
 	<script type=text/JavaScript>
 	$(window).scroll(function() {
     	if ($(".navbar").offset().top > 1) {
@@ -33,6 +35,7 @@
 	$(document).ready(function(){
   		$(".jumbotron h1").hide();
   		$(".arrow").hide();
+  		$(".contact-info h1").hide();
   	});
 	</script>
 
@@ -55,6 +58,7 @@
   					<li {% if home %}class="active"{% endif %}><a href="home.html">Home</a></li>
   					<li {% if skills %}class="active"{% endif %}><a href="skills.html">Skills</a></li>
   					<li {% if pictures %}class="active"{% endif %}><a href="pictures.html">Pictures</a></li>
+  					<li {% if contact %}class="active"{% endif %}><a href="contact.html">Contact</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -66,11 +70,11 @@
 	</div>
 	<div class="footer">
 		<ul>
-			<li><a class="fa fa-facebook fa-4x" href="https://facebook.com/nicosuarez25"></a></li>
-			<li><a class="fa fa-instagram fa-4x" href="https://www.instagram.com/nicosuarez/"></a></li>
-			<li><a class="fa fa-twitter fa-4x" href="https://twitter.com/_NicoSuarez_"></a></li>
-			<li><a class="fa fa-github fa-4x" href="http://github.com/nsuarez2"></a></li>
-			<li><a class="fa fa-linkedin fa-4x" href="https://www.linkedin.com/in/nsuarez2"></a></li>
+			<li><a class="fa fa-facebook fa-4x" href="https://facebook.com/nicosuarez25" target="_blank"></a></li>
+			<li><a class="fa fa-instagram fa-4x" href="https://www.instagram.com/nicosuarez/" target="_blank"></a></li>
+			<li><a class="fa fa-twitter fa-4x" href="https://twitter.com/_NicoSuarez_" target="_blank"></a></li>
+			<li><a class="fa fa-github fa-4x" href="http://github.com/nsuarez2" target="_blank"></a></li>
+			<li><a class="fa fa-linkedin fa-4x" href="https://www.linkedin.com/in/nsuarez2" target="_blank"></a></li>
 		</ul>
 	</div>
 </body>

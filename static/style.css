@@ -82,6 +82,11 @@ body {
     padding-top: 0;
 }
 
+.navbar-collapse{
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
 .navbar-toggle {
     background: rgba(248, 248, 248, 0.8);
     border: 0;
@@ -92,6 +97,9 @@ body {
 	background: url("rsz_coast.jpg") no-repeat center center fixed;
     position: relative;
     background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
 }
 
 .jumbotron {
@@ -106,6 +114,10 @@ body {
 
 .jumbotron h1 {
 	color: #FFFFFF;
+}
+
+.home .bottom h1 {
+    color: #1A5A97;
 }
 
 .arrow {
@@ -149,6 +161,9 @@ body {
     height: 75vh;
     position: relative;
     background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
 }
 
 .skills .bottom {
@@ -158,6 +173,10 @@ body {
     top: -25vh;
     background-color: white;
     padding: 50px 100px 0 100px;
+}
+
+.skills h1 {
+    color: #1A5A97;
 }
 
 .pictures {
@@ -179,25 +198,45 @@ body {
     padding-bottom: 25%;
 }
 
+.divider i {
+    color: #1A5A97;
+    font-size: 20pt;
+}
+
 #pic1 { 
     background: url('top_of_breck.jpg') no-repeat center center fixed;
     background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
 }
 #pic2 { 
     background: url('sam_breck.jpg') no-repeat center center fixed;
     background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
 }
 #pic3 { 
     background: url('matt_breck.jpg') no-repeat center center fixed;
     background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
 }
 #pic4 { 
     background: url('scott_breck.jpg') no-repeat center center fixed;
     background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
 }
 #pic5 { 
     background: url('swelly_breck.jpg') no-repeat center center fixed;
     background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
 }
 #pic6 {
     position: absolute;
@@ -209,19 +248,86 @@ body {
 #pic7 { 
     background: url('breck_village.jpg') no-repeat center center fixed;
     background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
 }
 #pic8 { 
-    background: url('rsz_coast.jpg') no-repeat center center fixed;
+    background: url('bsb.jpg') no-repeat center center fixed;
     background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
 }
 #pic9 { 
-    background: url('rsz_coast.jpg') no-repeat center center fixed;
+    background: url('selfie.jpg') no-repeat center center fixed;
     background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
 }
 
 .pictures .pic {
     height: 100vh;
     width: 100%;
+}
+
+.contact .top {
+    text-shadow: black 0.1em 0.1em 0.1em;
+    height: 100vh;
+    background: url('shapes.png') no-repeat center center fixed;
+    background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+}
+
+.contact h1 {
+    margin: 0;
+    color: white;
+    display: inline;
+}
+
+.contact a {
+    text-decoration: none;
+    color: white;
+}
+
+.contact-info {
+    position: relative;
+    top: 50%;
+    text-align: center;
+}
+
+.typed-container {
+    position: relative;
+    top: 35%;
+    text-align: center;
+}
+
+
+.typed-cursor{
+    font-size: 35pt;
+    color: white;
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
 }
 
 .footer {
@@ -231,7 +337,7 @@ body {
     position: fixed;
     bottom: 0;
     text-align: center;
-    font-size: 20pt;
+    font-size: 15pt;
 }
 
 .footer ul {
@@ -272,6 +378,9 @@ body {
     }
     .main {
         margin-bottom: 100px;
+    }
+    .pictures #pic1 {
+        background-attachment: local;
     }
 
 }

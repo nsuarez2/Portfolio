@@ -1,0 +1,24 @@
+{% extends "templates/base.html" %}
+{% block content %} 
+	<div class="contact">
+		<div class="top">
+			<div class="typed-container">
+				<h1 class="typed"></h1>
+			</div>
+			<div class="contact-info">
+				<h1><a href="mailto:nsuarez@umich.edu?subject=Hi%20Nico!" target="_blank">nsuarez@umich.edu </a></h1>
+				<h1> | </h1>
+				<h1> (248) 721-5704</h1>
+			</div>
+		</div>
+		<script>
+  		$(function(){
+      		$(".typed").typed({
+       			strings: ["It was nice to meet you.", "I hope we can stay in touch."],
+       			typeSpeed: 50
+   			}); 
+   			$(".contact-info h1").delay(6500).fadeIn(1500);
+   		});
+	</script>
+	</div>
+{%endblock%}
