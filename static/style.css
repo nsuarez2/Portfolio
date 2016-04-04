@@ -203,36 +203,44 @@ body {
     font-size: 20pt;
 }
 
+#hide-this {
+    display: none;
+}
+
+.navbar-brand:hover #hide-this{
+    display: inline-block;
+}
+
 #pic1 { 
-    background: url('top_of_breck.jpg') no-repeat center center fixed;
+    background: url('rsz_top_of_breck.jpg') no-repeat center center fixed;
     background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     -webkit-background-size: cover;
 }
 #pic2 { 
-    background: url('sam_breck.jpg') no-repeat center center fixed;
+    background: url('rsz_sam_breck.jpg') no-repeat center center fixed;
     background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     -webkit-background-size: cover;
 }
 #pic3 { 
-    background: url('matt_breck.jpg') no-repeat center center fixed;
+    background: url('rsz_matt_breck.jpg') no-repeat center center fixed;
     background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     -webkit-background-size: cover;
 }
 #pic4 { 
-    background: url('scott_breck.jpg') no-repeat center center fixed;
+    background: url('rsz_scott_breck.jpg') no-repeat center center fixed;
     background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     -webkit-background-size: cover;
 }
 #pic5 { 
-    background: url('swelly_breck.jpg') no-repeat center center fixed;
+    background: url('rsz_swelly_breck.jpg') no-repeat center center fixed;
     background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -246,21 +254,21 @@ body {
     z-index: 0;
 }
 #pic7 { 
-    background: url('breck_village.jpg') no-repeat center center fixed;
+    background: url('rsz_breck_village.jpg') no-repeat center center fixed;
     background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     -webkit-background-size: cover;
 }
 #pic8 { 
-    background: url('bsb.jpg') no-repeat center center fixed;
+    background: url('rsz_bsb.jpg') no-repeat center center fixed;
     background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     -webkit-background-size: cover;
 }
 #pic9 { 
-    background: url('selfie.jpg') no-repeat center center fixed;
+    background: url('rsz_selfie.jpg') no-repeat center center fixed;
     background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -357,7 +365,7 @@ body {
     text-decoration: none;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .footer {
         font-size: 10pt;
         height: 100px;
