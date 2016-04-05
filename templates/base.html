@@ -24,6 +24,9 @@
 	<script src="static/typed.js"></script>
 
 	<script type=text/JavaScript>
+
+	{% if pictures %}
+	{% else %}
 	$(window).scroll(function() {
     	if ($(".navbar").offset().top > 1) {
         	$('#custom-nav').addClass('affix');
@@ -31,6 +34,7 @@
         	$('#custom-nav').removeClass('affix');
     	} 
 	});
+	{% endif %}
 
 	$(document).ready(function(){
   		$(".jumbotron h1").hide();
@@ -50,7 +54,7 @@
 	          	<span class="icon-bar"></span>
 	        </button>
 			<div class="navbar-header">
-				<a class="navbar-brand" href="home.html">N<span id="hide-this">ico</span>S<span id="hide-this">uarez</span></a>	
+				<a class="navbar-brand" href="home.html">N<span class="hide-this">ico</span>S<span class="hide-this">uarez</span></a>	
 			</div>
 
 			<nav class="collapse navbar-collapse">

@@ -203,11 +203,11 @@ body {
     font-size: 20pt;
 }
 
-#hide-this {
+.hide-this {
     display: none;
 }
 
-.navbar-brand:hover #hide-this{
+.navbar-brand:hover .hide-this{
     display: inline-block;
 }
 
@@ -278,6 +278,35 @@ body {
 .pictures .pic {
     height: 100vh;
     width: 100%;
+}
+
+.divider-mobile {
+    display: none;
+}
+
+@media screen and (max-width: 1025px) {
+    .pictures .pic {
+        display: none;
+    }
+    .pictures .divider {
+        height: 50vh;
+    }
+    .pictures .divider-mobile {
+        display: inline-block;
+        height: 110vh;
+        width: 100%;
+        background-color: black;
+        position: relative;
+        padding-top: 25%;
+        padding-bottom: 25%;
+    }
+    .pictures img {
+        position: absolute;
+        left: 0;
+        top: 0vh;
+        width: 100%;
+        z-index: 0;
+    }
 }
 
 .contact .top {
@@ -365,7 +394,7 @@ body {
     text-decoration: none;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 769px) {
     .footer {
         font-size: 10pt;
         height: 100px;
@@ -387,12 +416,7 @@ body {
     .main {
         margin-bottom: 100px;
     }
-    .pictures #pic1 {
-        background-attachment: local;
-    }
-
 }
-
 
 
 
