@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Nico Suarez - {{page}}</title>
 
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="https://code.jquery.com/jquery-2.2.2.min.js"   integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI="   crossorigin="anonymous"></script>
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -24,23 +24,22 @@
 	<script src="static/typed.js"></script>
 
 	<script type=text/JavaScript>
+		{% if pictures %}
+		{% else %}
+		$(window).scroll(function() {
+	    	if ($(".navbar").offset().top > 1) {
+	        	$('#custom-nav').addClass('affix');
+	    	} else {
+	        	$('#custom-nav').removeClass('affix');
+	    	} 
+		});
+		{% endif %}
 
-	{% if pictures %}
-	{% else %}
-	$(window).scroll(function() {
-    	if ($(".navbar").offset().top > 1) {
-        	$('#custom-nav').addClass('affix');
-    	} else {
-        	$('#custom-nav').removeClass('affix');
-    	} 
-	});
-	{% endif %}
-
-	$(document).ready(function(){
-  		$(".jumbotron h1").hide();
-  		$(".arrow").hide();
-  		$(".contact-info h1").hide();
-  	});
+		$(document).ready(function(){
+	  		$(".jumbotron h1").hide();
+	  		$(".arrow").hide();
+	  		$(".contact-info h1").hide();
+	  	});
 	</script>
 
 </head>

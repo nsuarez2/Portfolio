@@ -172,7 +172,7 @@ body {
     left: 20%;
     top: -25vh;
     background-color: white;
-    padding: 50px 100px 0 100px;
+    padding: 5% 10% 0 10%;
 }
 
 .skills h1 {
@@ -284,30 +284,6 @@ body {
     display: none;
 }
 
-@media screen and (max-width: 1025px) {
-    .pictures .pic {
-        display: none;
-    }
-    .pictures .divider {
-        height: 50vh;
-    }
-    .pictures .divider-mobile {
-        display: inline-block;
-        height: 110vh;
-        width: 100%;
-        background-color: black;
-        position: relative;
-        padding-top: 25%;
-        padding-bottom: 25%;
-    }
-    .pictures img {
-        position: absolute;
-        left: 0;
-        top: 0vh;
-        width: 100%;
-        z-index: 0;
-    }
-}
 
 .contact .top {
     text-shadow: black 0.1em 0.1em 0.1em;
@@ -394,7 +370,36 @@ body {
     text-decoration: none;
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 1025px) {
+    .pictures .pic {
+        display: none;
+    }
+    .pictures .divider {
+        height: 50vh;
+    }
+    .pictures .divider-mobile {
+        display: inline-block;
+        height: 110vh;
+        width: 100%;
+        background-color: black;
+        position: relative;
+        padding-top: 25%;
+        padding-bottom: 25%;
+    }
+    .pictures img {
+        position: absolute;
+        left: 0;
+        top: 0vh;
+        width: 100%;
+        z-index: 0;
+    }
+    .skills .bottom {
+        width: 80%;
+        left: 10%;
+    }
+}
+
+@media screen and (max-width: 768px) {
     .footer {
         font-size: 10pt;
         height: 100px;
@@ -416,6 +421,62 @@ body {
     .main {
         margin-bottom: 100px;
     }
+}
+
+@media print {
+
+    .footer {
+        display: none;
+    }
+
+    .skills .top {
+        display: none;
+    }
+    
+    .bottom {
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 10%;
+    }
+
+    .skills a {
+        display: none;
+    }
+
+    .pictures .divider {
+        height: 50vh;
+        background-color: white;
+    }
+
+    .pictures #div1 {
+        height: 100vh;
+    }
+
+    .pic {
+        display: none;
+    }
+
+    .divider-mobile {
+        display: inline-block;
+        height: 50vh;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+
+    h1, h3, p, a {
+        color: black;
+    }
+
+    .contact .typed {
+        display: none;
+    }
+
+    .contact #for-print,
+    .contact .contact-info h1 {
+        display: inline-block;
+    }
+    
 }
 
 
