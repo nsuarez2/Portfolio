@@ -24,7 +24,7 @@ class MainHandler(webapp2.RequestHandler):
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
     ('/home.html', MainHandler),
-    ('/skills.html', MainHandler),
+    ('/coding.html', MainHandler),
     ('/pictures.html', MainHandler),
     ('/contact.html', MainHandler)
 ], debug=True)
